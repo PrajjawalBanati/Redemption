@@ -6,7 +6,7 @@ import Models.TaskType;
 import java.util.List;
 
 public interface TaskService {
-    public void addTask( String description);
+    public int addTask( String description);
     public void deleteTask(Integer id);
     public void updateTask(Integer id, String description);
     public void updateTaskStatus(Integer id, TaskType taskType);

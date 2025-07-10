@@ -16,18 +16,21 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public void addTask(String description) {
+    public int addTask(String description) {
         List<TaskDTO> taskDTOList = this.listTasks();
         TaskDTO taskDTO;
+        int id;
         if(taskDTOList.isEmpty())
         {
+            id = 1;
              taskDTO = TaskDTO.getBuilder().setId(1).setTaskDescription(description).setTaskType(TaskType.TODO).build();
         }
         else{
+            id = taskDTOList.getLast().getId()+1;
              taskDTO = TaskDTO.getBuilder().setId(taskDTOList.getLast().getId()+1).setTaskDescription(description).setTaskType(TaskType.TODO).build();
         }
-
         taskRepository.addTask(taskDTO);
+        return id;
     }
 
     @Override

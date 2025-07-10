@@ -27,7 +27,8 @@ public class TaskController {
 
     public void addTask(String description)
     {
-        this.taskService.addTask(description);
+        int id = this.taskService.addTask(description);
+        System.out.println("Task added successfully (ID: "+id+")");
     }
 
     public void listTasks()
