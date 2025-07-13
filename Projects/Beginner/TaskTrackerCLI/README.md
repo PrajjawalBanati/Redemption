@@ -70,7 +70,6 @@ Make sure to add these properties to the JSON file when adding a new task and up
     fasterxml.jackson.datatype.jsr310
   ```
 - You can find the libraries in the maven repository.
-
 - Usage
   - Run the `Main.java` file in your system.
   - Follow the same commands in the same syntax as mentioned above.
