@@ -1,0 +1,15 @@
+[23264] [3] [23:24:22.022] [2025-07-31] [INFO] Process started.
+[23264] [3] [23:24:22.025] [2025-07-31] [ERROR] Something went wrong.
+22448 3 23:28:48.047 2025-07-31 INFO Process started.
+22448 3 23:28:48.049 2025-07-31 ERROR Something went wrong.
+38820 38 23:30:49.508 2025-07-31 INFO Log message from thread 2
+32396 37 23:31:57.346 2025-07-31 INFO Log message from thread 1
+32396 39 23:31:57.349 2025-07-31 INFO Log message from thread 3
+32396 40 23:31:57.350 2025-07-31 INFO Log message from thread 4
+32396 38 23:31:57.351 2025-07-31 INFO Log message from thread 2
+32396 36 23:31:57.351 2025-07-31 INFO Log message from thread 0
+2236 37 23:34:31.069 2025-07-31 INFO Log message from thread 1
+2236 36 23:34:31.071 2025-07-31 INFO Log message from thread 0
+2236 38 23:34:31.071 2025-07-31 INFO Log message from thread 2
+2236 40 23:34:31.073 2025-07-31 INFO Log message from thread 4
+2236 39 23:34:31.074 2025-07-31 INFO Log message from thread 3

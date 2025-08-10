@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="logfile">shared-app.log</Property>
+        <Property name="processId">${sys:processId}</Property>
+    </Properties>
+
+    <Appenders>
+        <RandomAccessFile name="FileAppender"
+                          fileName="${logfile}"
+                          immediateFlush="true"
+                          append="true"
+                          locking="true">
+            <PatternLayout pattern="[%X{processId}] [%t] [%d{yyyy-MM-dd HH:mm:ss.SSS}] [%p] %m%n"/>
+        </RandomAccessFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="FileAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>
