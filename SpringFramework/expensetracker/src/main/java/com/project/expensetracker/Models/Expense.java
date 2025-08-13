@@ -1,51 +1,27 @@
 package com.project.expensetracker.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "expense")
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Getter
 public class Expense {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer expense_id;
+    @Column(name = "description", nullable = false)
     private String description;
+    @Column(name = "amount", nullable = false)
     private Integer amount;
+    @Column(name = "date_of_expenditure", nullable = false)
     private LocalDate localDate;
-
-    public Integer getExpense_id() {
-        return expense_id;
-    }
-
-    public void setExpense_id(Integer expense_id) {
-        this.expense_id = expense_id;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Integer getAmount() {
-        return amount;
-    }
-
-    public void setAmount(Integer amount) {
-        this.amount = amount;
-    }
-
-    public LocalDate getLocalDate() {
-        return localDate;
-    }
-
-    public void setLocalDate(LocalDate localDate) {
-        this.localDate = localDate;
-    }
+    @Column(name = "expense_type", nullable = false)
+    @Enumerated(value = EnumType.STRING)
+    private ExpenseType expenseType;
 }

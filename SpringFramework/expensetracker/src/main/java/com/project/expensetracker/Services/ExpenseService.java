@@ -8,7 +8,7 @@ import java.util.List;
 
 
 public interface ExpenseService {
-   public int addExpense(ExpenseDTO expenseDTO);
+   public Expense addExpense(ExpenseDTO expenseDTO);
    public List<Expense> getAllExpenses();
-   public boolean deleteExpense(int id);
+   public void deleteExpense(int id);
 }
